@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Relief Applications Exercice 1</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--JS files -->
+	<script type="text/javascript" src="lib/script.js"></script>
+	<!--CSS files -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css"> 
+</head>
+<body onload="loadAll()">
+	<!--NavBar-->
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Youtube Player</a>
+				<div class="input-group">
+					<input type="url" class="form-control" placeholder="Youtube Video URL" id="inputUrl">
+					<div class="input-group-btn">
+						<button type ="submit" class="btn btn-default" onclick="submitURL()">
+							<i class="glyphicon glyphicon-search"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container-fluid text-center">    
+		<div class="row content">
+			<!--History-->
+			<div id="colh" class="col-sm-3 sidenav" >
+				<h4>History</h4>
+				<div id="listHisto">	
+				</div>
+			</div>
+			<!--Video Player-->
+			<div class="col-sm-6 text-left"> 
+				<h1>Welcome on Youtube Player</h1>
+				<p id="demo">Type the URL of the embedded Youtube video you want to watch.</p>
+				<hr>
+				<div class="container-fluid text-center">
+					<iframe id="videoSquare" width="560" height="315" allowfullscreen>
+					</iframe>
+				</div>
+			</div>
+			<!--List of bookmarks-->
+			<div id="colbm" class="col-sm-3 sidenav">
+				<h4 id="indicator">You have 0 bookmarks</h4>
+				<button type="button" class="btn btn-default btn-block" onclick="addBookmark()">Add a bookmark</button>
+				<button type="button" class="btn btn-default btn-block" onclick="displayBookmarks()">Display bookmarks</button>
+				<div id="listBookmarks">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Footer-->
+	<footer class="container-fluid text-center">
+		<div id="result">Developped by: Képler LE</div>
+	</footer>
+</body>
+</html> 
